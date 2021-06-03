@@ -28,14 +28,14 @@ body {
 
 .author {
     width: 95%;
-    max-width: 300px;
+    max-width: 200px;
     font-size: 20px;
 }
 
 .affiliation {
     font-size: 20px;
     width: 95%;
-    max-width: 450px;
+    max-width: 250px;
 }
 
 .links {
