@@ -76,7 +76,7 @@
     <img style="width: 80%;" src="./resources/icml_ffig.svg" alt="Teaser figure."/>
     <br>
     <p style="width: 80%;">
-        We consider three classes of imitation learning algorithms. (a) On-policy reward moment-matching algorithms require access to the environment to generate learner trajectories. (b) Off-policy Q-value moment-matching algorithms run completely offline but can produce policies with quadraticallycompounding errors. (c) On-policy Q-value moment-matching algorithms require access to the environment and a queryable expert but canreduce the exploration burden of the learner in recoverable MDPs.
+      When attempting to mimic an expert, a learner could learn by (a) rolling out their policy and comparing generated trajectories to expert trajectories, (b) producing actions on expert states and attempting to match action-conditionals, or (c) performing rollouts and attempting to match corrections provided by a queryable expert. We provide, for each of these settings, bounds for how well the learner can do, reduction-based algorithms for efficiently finding strong policies, and simple yet competitive practical instantiations that can scale to high-dimensional tasks.
     </p>
 
     <br><br>
