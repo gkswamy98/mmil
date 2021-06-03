@@ -76,7 +76,7 @@
     <img style="width: 80%;" src="./resources/icml_ffig.svg" alt="Teaser figure."/>
     <br>
     <p style="width: 80%;">
-        Under construction.
+        We consider three classes of imitation learning algorithms. (a) On-policy reward moment-matching algorithms require access to the environment to generate learner trajectories. (b) Off-policy Q-value moment-matching algorithms run completely offline but can produce policies with quadraticallycompounding errors. (c) On-policy Q-value moment-matching algorithms require access to the environment and a queryable expert but canreduce the exploration burden of the learner in recoverable MDPs.
     </p>
 
     <br><br>
@@ -84,7 +84,7 @@
 
     <h1>Abstract</h1>
     <p style="width: 80%;">
-        This is my abstract.
+        We provide a unifying view of a large family of previous imitation learning algorithms through the lens of moment matching. At its core, our classification scheme is based on whether the learner attempts to match (1) reward or (2) action-value moments of the expert's behavior, with each option leading to differing algorithmic approaches. By considering adversarially chosen divergences between learner and expert behavior, we are able to derive bounds on policy performance that apply for all algorithms in each of these classes, the first to our knowledge. We also introduce the notion of recoverability, implicit in many previous analyses of imitation learning, which allows us to cleanly delineate how well each algorithmic family is able to mitigate compounding errors. We derive two novel algorithm templates, AdVIL and AdRIL, with strong guarantees, simple implementation, and competitive empirical performance
     </p>
 
     <br><br>
