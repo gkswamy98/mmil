@@ -161,7 +161,7 @@
 <p style="width: 80%;"> A natural question at this point might be what $H$ means in the previous table. $H$ is the <i>recoverability constant</i> of a problem and is a property of both the expert's policy and the set of moments considered. Intuitively, it tells us how many timesteps it takes the expert to correct a mistake. $H$ quantifies the difficulty of the problem and tells us how much on-policy corrections from the expert can help -- for $H$ that is $O(T)$, the expert can help very little, while for $H$ that is $O(1)$, on-policy corrections can help a lot.</p>
 <h2>3. Game-Theoretic Reductions</h2>
     <p style="width: 80%;">So, how does one actually match moments? We formulate moment-matching as a <i>zero-sum game</i> and compute <i>equilibrium strategies</i> for the policy player against adversarially chosen divergences that attempts to distinguish between learner and expert samples. We identify two flavors of such algorithms:
-<ul style="width: 70%; margin: auto; text-align: center; list-style-type: none;">
+<ul style="width: 80%; margin: auto; text-align: left; list-style-type: none;">
   <li><b>Primal</b>: Policy player follows a slow and steady <i>no-regret</i> strategy while the discriminative player best-responds to the last policy player iterate.</li>
   <li><b>Dual</b>: Discriminative player follows a <i>no-regret</i> strategy while the policy player best-responds. </li>
 </ul>
@@ -171,11 +171,11 @@ As we show in our paper, access to oracles that can perform no-regret and best-r
     </p>
 <h2>4. Practical Procedures</h2>
     <p style="width: 80%;">One of the advantage of a reductions approach is that it allows us to plug in any no-regret-style procedure and have the performance guarantees still hold. We introduce three novel algorithms which can be seen as realizations of the above no-regret reduction:</p>
-    <ul style="width: 70%; margin: auto; text-align: center; list-style-type: none;">
+    <ul style="width: 80%; margin: auto; text-align: left; list-style-type: none;">
   <li><code>AdVIL</code>: An off-$Q$ algorithm with the learner and discriminator taking the form of an IPM-GAN.</li>
   <li><code>AdRIL</code>: A reward-moment-matching algorithm where the replay buffer can be seen as the discriminator, assigning dynamically updating rewards to samples that the learner uses to compute updates via maximum entropy RL.</li>
     <li><code>DAeQuIL</code>: An on-$Q$ algorithm that can be seen as an extension of DAgger where, at each round, the discriminator adversarially choses a loss function, and the learner minimizes the sum of losses over the aggregated data.</li>
-</ul>
+</ul> <br>
 <p style="width: 80%;">We implemented all three of these algorithms in PyTorch and tested them in the PyBullet suite. <code>AdVIL</code> is competitve with the state-of-the-art, while <code>AdRIL</code> and <code>DAeQuIL</code> are able to significantly out-perform baselines on some tasks. We release our code at the link below with the hope that the community will be able to build on and refine our implementations.</p>
    <a href="https://github.com/gkswamy98/pillbox"><i class="fa fa-github" style="font-size: 50px; padding-bottom: 10px"></i><br>[Code]</a>
 
