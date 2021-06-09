@@ -141,7 +141,7 @@
 </tbody>
 </table>
 <br>
-<p style="width: 80%">While the reward-moment bounds might seem too good to be true (they don't require an interactive expert yet seem to be tighter than the on-$Q$ bounds), this comes at the cost of a potentially exponentially more complex optimization problem to solve. Importantly, these bounds apply for <i>all</i> algorithms in each of these classes.</p>
+<p style="width: 80%">While the reward-moment bounds might seem too good to be true (they don't require an interactive expert yet seem to be tighter than the <i>on-policy Q-value</i> bounds), this comes at the cost of a potentially exponentially more complex optimization problem to solve. Importantly, these bounds apply for <i>all</i> algorithms in each of these classes.</p>
     
 <h2>2. Recoverability</h2>
 <p style="width: 80%;"> A natural question at this point might be what $H$ means in the previous table. $H$ is the <i>recoverability constant</i> of a problem and is a property of both the expert's policy and the set of moments considered. Intuitively, it tells us how many timesteps it takes the expert to correct a mistake. $H$ quantifies the difficulty of the problem and tells us how much on-policy corrections from the expert can help -- for $H$ that is $O(T)$, the expert can help very little, while for $H$ that is $O(1)$, on-policy corrections can help a lot.</p>
